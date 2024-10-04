@@ -1,0 +1,196 @@
+:root{
+    --verde: #5FAD41;
+    --amarelo: #BFAE48;
+    --carvaoazul: #2E4052;
+    --claroazul: #416788;
+    --roxo: #5C0029;
+    --preto: #000000;
+    --branco: #FFFFFF;
+}
+
+*{    
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    font-size: 16px;
+    overflow-x: hidden;  /* barra scroll do eixo x deitada embaixo(para fazer ela sumir: hidden)*/
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: justify;
+    color: var(--preto);
+    background-color: var(--claroazul);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    background-color: var(--amarelo);
+    padding: 9px;
+}
+
+#logoheader{
+    display: flex;
+    justify-content: left;
+    width: auto;
+    height: auto;
+    padding: 0;
+    position: absolute;
+    top: 5px;
+    left: 70px;
+}
+
+#idMenu{
+    display: inline-block;
+    align-content: end;
+    border-radius: 18px;
+    color: var(--preto);
+    margin: auto 0px auto 650px;
+    width: 50%;
+}
+
+.listaMenu{
+    display: inline-block;
+    padding: 20px 20px 20px 20px;
+    text-decoration: none;
+    color: var(--preto);
+}
+
+.listaMenu:hover{
+    color: var(--branco);
+    outline: 2px solid var(--claroazul);
+}
+
+li{
+    padding: 20px 20px 20px 20px;
+    text-decoration: none;
+    color: var(--preto);
+}
+
+main{
+   flex:1;
+   width: 90%;
+   margin: auto;
+   overflow: scroll;
+   overflow-x: hidden;
+   background-color: var(--branco);
+}
+
+h1{
+    margin: 9px;
+    text-align: center;
+    padding: 15px;
+}
+
+h2{
+    margin: 9px;
+    text-align: center;
+    padding: 15px;
+}
+
+p{
+    text-indent: 14px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: 14px;
+    margin: 10px;
+}
+
+img{
+    height: 80px; 
+    width: 80px;
+    padding: 20px 20px 20px 20px;
+}
+
+video{
+    height: 280px;
+    width: 280px;
+}
+
+#idCantores{
+    display: flex;
+    justify-content: space-around;
+}
+
+#idNacional{
+    border-radius: 3px;
+    height: 100%;
+    width: 45%;
+    padding: 5px;
+    box-shadow:0px 0px 40px 0.1px var(--preto);
+    text-align: center;
+}
+
+#idIntern{
+    border-radius: 3px;
+    height: 95%;
+    width: 45%;
+    padding: 5px;
+    box-shadow:0px 0px 40px 1px var(--preto);
+    text-align: center;
+}
+
+.container{
+    width: 60%;
+    margin: auto;
+    text-align: justify;
+    font-size: 1.1em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 3px;
+}
+
+.container > h2{
+    text-align: left;
+}
+
+.invert-button {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+button {
+    font-size: 16px; /* Tamanho fixo da fonte dos botões */
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--claroazul);
+}
+
+button:focus {
+    outline: none;
+}
+
+fieldset{
+    padding: 10px;
+}
+
+.imgFooter{
+    height: 80px; 
+    width: 80px;
+    padding: 20px 20px 20px 20px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: var(--carvaoazul);
+    width: 100%;
+}

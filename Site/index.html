@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trilha Sonora de 2006</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+
+        <div id="logoheader">
+            <img style="width: 128px; height: 128px; padding: 0;" src="imagens/logotipomusicas2006.png"
+                alt="logotipo do site com um M e um número 6." />
+        </div>
+
+        <nav id="idMenu">
+            <ul>
+                <a href="#">
+                    <li class="listaMenu">Página inicial</li>
+                </a>
+                <a href="galeria.html" rel="next">
+                    <li class="listaMenu">Cantores e músicas</li>
+                </a>
+                <a href="form.html">
+                    <li class="listaMenu">Cadastro</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="controls">
+            <button id="decrease-font">Diminuir Fonte</button>
+            <button id="increase-font">Aumentar Fonte</button>
+        </div>
+
+        <h1>
+            VAMOS CONHECER UM POUCO DO UNIVERSO MUSICAL DO ANO SENSACIONAL DE 2006
+        </h1>
+
+        <h2>
+            BEM VINDO(A) AMANTE DA MÚSICA!
+        </h2>
+
+        <p>
+            Bem-vindo(a) ao site dedicado às músicas que marcaram o ano de 2006! Prepare-se para uma viagem nostálgica
+            pelos
+            hits que dominaram as paradas e definiram uma era musical inesquecível. De <strong>Rihanna</strong> a
+            <strong>Justin Timberlake</strong>, passando
+            por bandas como <strong>Arctic Monkeys</strong> e <strong>Red Hot Chili Peppers</strong>, cada canção deste
+            ano trouxe sua própria história e
+            emoção. Explore conosco as melodias que fizeram 2006 um ano inesquecível na música. Vamos relembrar juntos e
+            celebrar os sons que moldaram nossa cultura musical há quase duas décadas.
+        </p>
+
+        <h3>
+            Vamos apresentar abaixo as músicas mais signfificativas desse ano tão especial, apresentando sua letra e sua
+            canção.
+        </h3>
+
+        <h4>
+            Começando pela música: "My love" do cantor Justin Timberlake.
+        </h4>
+
+        <br />
+
+        <div>
+            <p>Clique aqui para ouvir a canção "My Love" do Cantor JUSTIN TIMBARLAKE:</p>
+            <a href="https://youtu.be/ulOb9gIGGd0?feature=shared" rel="external" target="_blank"><img
+                    style="padding: 0;" src="imagens/playyou.png" alt="logo do aplicativo youtube preta" /></a>
+        </div>
+
+        <br />
+        <br />
+
+        <h4>
+            Uma música brasileira bem famosa é a da dupla Chitaozinho e Xororó
+        </h4>
+
+        <video controls width="500px" height="500px"> <!-- controls serve para ter a opção de clicar no play-->
+            <source src="midia/É Amor,é Paixão-Chitãozinho e Xororó.mp4" />
+            <source src="midia/É-Amor_é-Paixão-Chitãozinho-e-Xororó.m4v" />
+            <source src="midia/É Amor,é Paixão-Chitãozinho e Xororó.webm" />
+            <source src="midia/É Amor,é Paixão-Chitãozinho e Xororó.ogv" />
+            <p>nao baixa lindO</p>
+        </video>
+
+        <br />
+
+        <p>Vamos ouvir uma música da cantora Pink:</p>
+        <audio controls>
+            <source src="midia/P!nk - Stupid Girls (320).mp3" />
+            <source src="midia/P_nk-Stupid-Girls-_320_.wav" />
+            <source src="midia/P_nk-Stupid-Girls-_320_.ogg" />
+        </audio>
+
+
+    </main>
+
+    <footer>
+
+        <a href="https://www.whatsapp.com/?lang=pt_BR" rel="external" target="_blank"><img class="imgFooter"
+                src="imagens/whats.png" alt="logo do aplicativo whatsapp preta" /></a>
+        <a href="https://www.instagram.com/" rel="external" target="_blank"><img class="" src="imagens/insta.png"
+                alt="logo do aplicativo instagram preta" /></a>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var currentFontSize = parseInt(window.localStorage.getItem('fontSize')) || 16;
+
+            document.body.style.fontSize = currentFontSize + 'px';
+
+            document.querySelector('#increase-font').addEventListener('click', function () {
+                if (currentFontSize < 100) { // Verifica se o tamanho não ultrapassa 100px
+                    currentFontSize += 2; // Aumenta o tamanho da fonte
+                    document.body.style.fontSize = currentFontSize + 'px';
+                    window.localStorage.setItem('fontSize', currentFontSize);
+                }
+            });
+
+            document.querySelector('#decrease-font').addEventListener('click', function () {
+                if (currentFontSize > 10) { // Verifica se o tamanho não é menor que 10px
+                    currentFontSize -= 2; // Diminui o tamanho da fonte
+                    document.body.style.fontSize = currentFontSize + 'px';
+                    window.localStorage.setItem('fontSize', currentFontSize);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

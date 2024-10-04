@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        input[type="submit"] {
+            border: none;
+            cursor: pointer;
+        }
+
+        .error {
+            color: #FF0000;
+            font-size: 14px;
+        }
+
+        .error-message {
+            color: #FF0000;
+            font-weight: bold;
+        }
+
+        .warning {
+            color: #FF0000;
+            font-weight: bold;
+        }
+
+        .valid {
+            color: #00FF00;
+        }
+
+        .invalid {
+            color: #FF0000;
+        }
+
+        .fulfilled {
+            background-color: pink;
+        }
+
+        #password-requirements {
+            margin-top: 10px;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #password-requirements li {
+            margin: 5px 0;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        #submit-btn:disabled {
+            background-color: #808080;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <div id="logoheader">
+            <img style="width: 128px; height: 128px; padding: 0;" src="imagens/logotipomusicas2006.png"
+                alt="logotipo do site com um M e um número 6." />
+        </div>
+
+        <nav id="idMenu">
+            <ul>
+                <a href="index.html">
+                    <li class="listaMenu">Página inicial</li>
+                </a>
+                <a href="galeria.html" rel="prev">
+                    <li class="listaMenu">Cantores e músicas</li>
+                </a>
+                <a href="#">
+                    <li class="listaMenu">Cadastro</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="controls">
+            <button id="decrease-font">Diminuir Fonte</button>
+            <button id="increase-font">Aumentar Fonte</button>
+        </div>
+
+        <button id="invert-colors">Inverter Cores</button>
+
+        <h1 style="font-size: 30px;">
+            Cadastro básico:
+        </h1>
+
+        <div class="container">
+            <form id="userForm" onsubmit="validateForm(); return false;">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <br />
+
+                <label for="birthdate">Data de Nascimento:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+                <br />
+
+                <label for="email">Digite seu E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <br />
+
+                <div>
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" oninput="validatePassword()">
+                </div>
+                <div>
+                    <label for="confirmPassword">Confirmar Senha:</label>
+                    <input type="password" id="confirmPassword" oninput="validatePassword()">
+                </div>
+                <div id="password-requirements">
+                    <ul>
+                        <li id="uppercase-requirement">Pelo menos uma letra maiúscula</li>
+                        <li id="number-requirement">Pelo menos um número</li>
+                        <li id="special-requirement">Pelo menos um caractere especial</li>
+                    </ul>
+                </div>
+
+                <fieldset>
+                    <legend>Estilo de Música Preferido:</legend>
+                    <input type="radio" id="rock" name="musicStyle" value="rock">
+                    <label for="rock">Rock/Rock Pop</label><br />
+
+                    <input type="radio" id="country" name="musicStyle" value="country">
+                    <label for="country">Country</label><br />
+
+                    <input type="radio" id="emo" name="musicStyle" value="emo">
+                    <label for="emo">Emo</label><br />
+
+                    <input type="radio" id="eletronica" name="musicStyle" value="eletronica">
+                    <label for="eletronica">Eletrônica</label><br />
+
+                    <input type="radio" id="hiphop" name="musicStyle" value="hiphop">
+                    <label for="hiphop">Hip Hop</label><br />
+                </fieldset>
+                <br />
+
+                <label for="state">Estado (Sudeste):</label>
+                <select id="state" name="state">
+                    <option value="">Selecione</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="ES">Espírito Santo</option>
+                </select>
+                <br />
+                <br />
+
+                <label for="city">Cidade:</label>
+                <select id="city" name="city">
+                </select>
+                <br />
+                <br />
+
+                <div id="errorMessage" class="invalid"></div>
+                <div id="successMessage" class="valid"></div>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <h2>Digite seu texto:</h2>
+            <textarea id="myTextarea" oninput="countChars()" maxlength="25"></textarea>
+            <p>Caracteres restantes: <span id="charCount">25</span></p>
+            <p id="warningMessage" style="display: none; color: red;">Você atingiu o limite de caracteres!</p>  
+
+
+        </div>
+    </main>
+
+    <footer>
+        <a href="https://www.whatsapp.com/?lang=pt_BR" rel="external" target="_blank"><img class="imgFooter"
+                src="imagens/whats.png" alt="logo do aplicativo whatsapp preta" /></a>
+        <a href="https://www.instagram.com/" rel="external" target="_blank"><img class="imgFooter"
+                src="imagens/insta.png" alt="logo do aplicativo instagram preta" /></a>
+    </footer>
+
+    <script src="site2006.js"></script>
+
+</body>
+
+</html>
